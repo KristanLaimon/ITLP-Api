@@ -28,7 +28,7 @@ if they want to, of course.
 
 ## Security
 The password and username are used only the moment you instanciate the api object and permanently deleted
-when closing the C# program. It's NOT STORED in any PLACE.
+when closing the C# program. It's NOT STORED in any PLACE unless you explicitly config this library to do so.
 If you don't trust, you can simply check the code here in this repo.
 
 ## Disclaimer
