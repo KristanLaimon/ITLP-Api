@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace TecScrapperLib.__internals__;
+﻿namespace TecWrapperApi.Helpers;
 
 internal static class HeadersHelper
 {
@@ -35,5 +33,26 @@ internal static class HeadersHelper
                 copy[keyValuePair.Key] = keyValuePair.Value;
             return copy;
         }
+    }
+    
+    public static Dictionary<string, string> GetAuthHeaders(string studentNoControl, string password)
+    {
+        var toReturn = new Dictionary<string, string>()
+        {
+            { "editControl", studentNoControl },
+            { "editContraseña", password },
+            { "btnEntrar", "Entrar" }
+        };
+        return toReturn;
+    }
+
+    public static Dictionary<string, string> ConcatHeaders(Dictionary<string, string> leftHeaders, Dictionary<string, string> rightHeaders)
+    {
+        var result = new Dictionary<string, string>(leftHeaders);
+        foreach (var pair in rightHeaders)
+        {
+            result[pair.Key] = pair.Value; // Overwrites if key exists, or adds if it doesn't
+        }
+        return result;
     }
 }

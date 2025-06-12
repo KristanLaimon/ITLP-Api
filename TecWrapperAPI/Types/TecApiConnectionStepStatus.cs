@@ -1,4 +1,4 @@
-﻿namespace TecScrapperLib.Types;
+﻿namespace TecWrapperApi.Types;
 
 public record TecApiConnectionStepStatus
 {

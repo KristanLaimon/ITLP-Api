@@ -1,8 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TecScrapperLib", "TecScrapperLib\TecScrapperLib.csproj", "{DA29DBE2-2DA2-4C61-878F-7416D4EEDC75}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TecWrapperAPI", "TecWrapperAPI\TecWrapperAPI.csproj", "{DA29DBE2-2DA2-4C61-878F-7416D4EEDC75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TecScapperCLI", "TecScapperCLI\TecScapperCLI.csproj", "{8C5CDF05-CE31-4B4A-876F-EBB5AEFFB410}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TecApiWrapperTesting", "TecApiWrapperTesting\TecApiWrapperTesting.csproj", "{1E7A2DD8-D38A-4612-9F2D-9EC578654722}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +14,9 @@ Global
 		{DA29DBE2-2DA2-4C61-878F-7416D4EEDC75}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA29DBE2-2DA2-4C61-878F-7416D4EEDC75}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA29DBE2-2DA2-4C61-878F-7416D4EEDC75}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8C5CDF05-CE31-4B4A-876F-EBB5AEFFB410}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8C5CDF05-CE31-4B4A-876F-EBB5AEFFB410}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8C5CDF05-CE31-4B4A-876F-EBB5AEFFB410}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8C5CDF05-CE31-4B4A-876F-EBB5AEFFB410}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E7A2DD8-D38A-4612-9F2D-9EC578654722}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E7A2DD8-D38A-4612-9F2D-9EC578654722}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E7A2DD8-D38A-4612-9F2D-9EC578654722}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E7A2DD8-D38A-4612-9F2D-9EC578654722}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

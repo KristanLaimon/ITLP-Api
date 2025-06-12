@@ -1,4 +1,4 @@
-﻿namespace TecScrapperLib.__internals__;
+﻿namespace TecWrapperApi.Helpers;
 
 /// <summary>
 /// Provides utility methods for managing HTTP client headers.

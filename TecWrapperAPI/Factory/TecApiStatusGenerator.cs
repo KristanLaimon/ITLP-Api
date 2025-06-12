@@ -1,7 +1,7 @@
 ﻿using System.Net;
-using TecScrapperLib.Types;
+using TecWrapperApi.Types;
 
-namespace TecScrapperLib.Factory;
+namespace TecWrapperApi.Factory;
 internal static class TecApiStatusGenerator
 {
     public static TecApiStatus GenerateOK()

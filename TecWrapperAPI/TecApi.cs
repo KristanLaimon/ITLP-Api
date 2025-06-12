@@ -1,13 +1,12 @@
 ﻿using System.Net;
-using AngleSharp.Dom;
 using AngleSharp.Html.Dom;
 using AngleSharp.Html.Parser;
-using TecScrapperLib.__internals__;
-using TecScrapperLib.Factory;
-using TecScrapperLib.Types;
-using TecScrapperLib.Utils;
+using TecWrapperApi.Factory;
+using TecWrapperApi.Helpers;
+using TecWrapperApi.Types;
+using TecWrapperApi.Utils;
 
-namespace TecScrapperLib;
+namespace TecWrapperApi;
 
 public class TecApi
 {
@@ -15,12 +14,16 @@ public class TecApi
     private readonly Logger logger;
     private readonly HttpClientHandler httpHandler;
     private readonly HttpClient httpClient;
+    private readonly string noControl;
+    private readonly string password;
     
-    public TecApi(string? customUrl = null, bool disableLogging = true)
+    public TecApi(string noControl, string password, string? customUrl = null, bool disableLogging = true)
     {
         this.URL = customUrl ?? this.URL;
         this.httpHandler = new HttpClientHandler();
         this.httpHandler.CookieContainer = new CookieContainer();
+        this.noControl = noControl;
+        this.password = password;
         this.httpClient = new HttpClient(this.httpHandler);
         this.logger = new Logger(disable: disableLogging);
         this.logger.Log(LogLevel.Info, "Created http client");
@@ -39,15 +42,8 @@ public class TecApi
         if (!fetchingVariablesForPost.httpStatus.WasSuccessful()) return fetchingVariablesForPost.httpStatus;
         Dictionary<string, string> postVariablesToSend = (Dictionary<string,string>)fetchingVariablesForPost.somethingToReturn!;
 
-        List<KeyValuePair<string, string>> list = new()
-        {
-            new KeyValuePair<string, string>("editControl", "noControlHERE"),
-            new KeyValuePair<string, string>("editContraseña", "passwordHERE"), //TODO: Not completed, just for testing
-            new KeyValuePair<string, string>("btnEntrar", "Entrar")
-        };
-        list.AddRange(postVariablesToSend.Select(key_Value => new KeyValuePair<string, string>(key_Value.Key, key_Value.Value)));
-        
-        var postBody = new FormUrlEncodedContent(list.ToArray());
+        var authHeadersContent = HeadersHelper.GetAuthHeaders(this.noControl, this.password);
+        var postBody = new FormUrlEncodedContent(authHeadersContent);
         var postHeaders = HeadersHelper.GetCommonHeaders(anyExtraHeadersToUse: [new KeyValuePair<string, string>("Cookie",  $"ASP.NET_SessionId={depCookie.Value}")]);
         
         string mainPageInfoHtmlText;

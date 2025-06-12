@@ -1,6 +1,6 @@
 ﻿using System.Net;
 
-namespace TecScrapperLib.Types;
+namespace TecWrapperApi.Types;
 
 public record TecApiStatus
 {

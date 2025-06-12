@@ -1,4 +1,4 @@
-﻿namespace TecScrapperLib.Utils;
+﻿namespace TecWrapperApi.Utils;
 
 internal enum LogLevel
 {

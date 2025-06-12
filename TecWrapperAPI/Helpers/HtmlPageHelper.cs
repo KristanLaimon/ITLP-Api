@@ -2,7 +2,7 @@
 using AngleSharp.Html.Dom;
 using AngleSharp.Html.Parser;
 
-namespace TecScrapperLib.Helpers;
+namespace TecWrapperApi.Helpers;
 
 internal static class HtmlPageHelper
 {
@@ -10,25 +10,14 @@ internal static class HtmlPageHelper
     private static string? cachedTextDocument;
     private static IHtmlDocument? cachedDocument;
     
-    public static bool IsLoginPage(string htmlPage)
+    internal static bool IsLoginPage(string htmlPage)
     {
         if (string.IsNullOrEmpty(htmlPage)) return false;
         
         parser = new HtmlParser();
-        var document = parser.ParseDocument(htmlPage);
-        // IElement? inputButton = 
-        return false;
-    }
-
-    private static IHtmlDocument ParseTextDocument(string htmlPage)
-    {
-        if (cachedTextDocument is not null && cachedTextDocument != htmlPage)
-        {
-            cachedTextDocument = htmlPage;
-            cachedDocument = parser.ParseDocument(htmlPage);
-        }
-        
-        return cachedDocument ?? parser.ParseDocument(htmlPage);
+        var document = ParseTextDocument(htmlPage);
+        IHtmlInputElement? inputButton = document.QuerySelector<IHtmlInputElement>("input[id=\"editControl\"]");
+        return inputButton != null;
     }
     
     /// <summary>
@@ -54,10 +43,29 @@ internal static class HtmlPageHelper
         return found as T;
     }
 
-    public static T[]? FindMany<T>(string htmlPageContent, string cssSelector) where T : class, IElement
+    /// <summary>
+    /// Find all elements in html that fulfills the given cssSelector
+    /// </summary>
+    /// <param name="htmlPageContent">The HTML content to search within</param>
+    /// <param name="cssSelector">The css selector to match the element</param>
+    /// <typeparam name="T">The type of the element to return, which must implement <see cref="IElement"/> and be a class as well (not a interface only)</typeparam>
+    /// <returns>A collection (list) of elements that matced the cssSelector, if not found, returns an empty array. (can't return null)</returns>
+    public static T[] FindMany<T>(string htmlPageContent, string cssSelector) where T : class, IElement
     {
-        if (string.IsNullOrEmpty(htmlPageContent)) return null;
+        if (string.IsNullOrEmpty(htmlPageContent)) return [];
         var document = ParseTextDocument(htmlPageContent);
-        return [];
+        var found = document.QuerySelectorAll(cssSelector);
+        return found as T[] ?? [];
+    }
+    
+    private static IHtmlDocument ParseTextDocument(string htmlPage)
+    {
+        if (cachedTextDocument is null || cachedTextDocument == htmlPage)
+            return cachedDocument ?? parser.ParseDocument(htmlPage);
+        
+        cachedTextDocument = htmlPage;
+        cachedDocument = parser.ParseDocument(htmlPage);
+
+        return cachedDocument;
     }
 }
