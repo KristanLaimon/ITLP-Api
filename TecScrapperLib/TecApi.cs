@@ -2,6 +2,7 @@
 using AngleSharp.Dom;
 using AngleSharp.Html.Dom;
 using AngleSharp.Html.Parser;
+using TecScrapperLib.__internals__;
 using TecScrapperLib.Factory;
 using TecScrapperLib.Types;
 using TecScrapperLib.Utils;
@@ -38,6 +39,26 @@ public class TecApi
         if (!fetchingVariablesForPost.httpStatus.WasSuccessful()) return fetchingVariablesForPost.httpStatus;
         Dictionary<string, string> postVariablesToSend = (Dictionary<string,string>)fetchingVariablesForPost.somethingToReturn!;
 
+        List<KeyValuePair<string, string>> list = new()
+        {
+            new KeyValuePair<string, string>("editControl", "noControlHERE"),
+            new KeyValuePair<string, string>("editContraseña", "passwordHERE"), //TODO: Not completed, just for testing
+            new KeyValuePair<string, string>("btnEntrar", "Entrar")
+        };
+        list.AddRange(postVariablesToSend.Select(key_Value => new KeyValuePair<string, string>(key_Value.Key, key_Value.Value)));
+        
+        var postBody = new FormUrlEncodedContent(list.ToArray());
+        var postHeaders = HeadersHelper.GetCommonHeaders(anyExtraHeadersToUse: [new KeyValuePair<string, string>("Cookie",  $"ASP.NET_SessionId={depCookie.Value}")]);
+        
+        string mainPageInfoHtmlText;
+        await HttpClientHelper.WithHeadersContext(this.httpClient, postHeaders, async (httpClientWithHeaders) =>
+        {
+            
+            var res = await httpClient.PostAsync("https://siia.lapaz.tecnm.mx/Login.aspx", postBody); 
+            mainPageInfoHtmlText = await res.Content.ReadAsStringAsync();
+            // if (htmlPage.Contains("Instituto Tecnologico de La Paz") && htmlPage.Contains("No. de Control:"))
+        });
+        
         return await Task.FromResult(TecApiStatusGenerator.GenerateOK());
     }
 
