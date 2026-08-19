@@ -55,7 +55,10 @@ public partial class TecApi
         HttpResponseMessage response;
         try
         {
-            response = await this.httpClient.PostAsync(LoginUrl, new FormUrlEncodedContent(formValues));
+            response = await this.httpClient.PostAsync(
+                LoginUrl,
+                new FormUrlEncodedContent(formValues)
+            );
         }
         catch (HttpRequestException ex)
         {
@@ -91,7 +94,9 @@ public partial class TecApi
     private void EnsureLoggedIn()
     {
         if (!this.IsLoggedIn)
-            throw new TecApiNotLoggedInException("Call LoginAsync() before requesting student data.");
+            throw new TecApiNotLoggedInException(
+                "Call LoginAsync() before requesting student data."
+            );
     }
 
     private async Task<string> FetchHtmlOrThrow(string url)
@@ -125,7 +130,10 @@ public partial class TecApi
 
     private static string ExtractCsrfTokenOrThrow(string loginPageHtml)
     {
-        var tokenInput = HtmlPageHelper.FindFirst<IHtmlInputElement>(loginPageHtml, "input[name=\"_token\"]");
+        var tokenInput = HtmlPageHelper.FindFirst<IHtmlInputElement>(
+            loginPageHtml,
+            "input[name=\"_token\"]"
+        );
         if (tokenInput is null || string.IsNullOrEmpty(tokenInput.Value))
             throw new TecApiParsingException(
                 "Couldn't find the CSRF token on the login page. (Tec changed the login form layout?)"
@@ -139,7 +147,9 @@ public partial class TecApi
             return;
 
         var errorsMatch = LoginErrorsRegex().Match(resultHtml);
-        string reason = errorsMatch.Success ? errorsMatch.Groups[1].Value : "Usuario o contraseña incorrectos";
+        string reason = errorsMatch.Success
+            ? errorsMatch.Groups[1].Value
+            : "Usuario o contraseña incorrectos";
         throw new TecApiInvalidCredentialsException(reason);
     }
 }

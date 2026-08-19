@@ -9,8 +9,10 @@ A direct and easy kardex access from C# library designed to interface
 with the "Instituto Tecnológico de La Paz" school's Kardex system
 "An academic records platform where students can view their grades"
 
-The wrapper simplifies communication with the underlying ASP.NET-based API/page,
+The wrapper simplifies communication with the underlying siia2 (Laravel-based) portal,
 allowing for asynchronous connections and secure credential management.
+
+See [docs/how-it-works.md](docs/how-it-works.md) for how the scraping/login flow works under the hood.
 
 ## Key Features:
 - ⚡ Asynchronous API Requests — Clean and simple use of async/await for all network operations.
@@ -25,11 +27,6 @@ easy way to access the data from students (grades, academic situation, etc) prog
 This wrapper automates and abstracts that interaction, making it easier for any students/(c# developers)
 to integrate Kardex functionality into their C# applications (e.g., personal dashboards, bots, or tools)
 if they want to, of course.
-
-## Security
-The password and username are used only the moment you instanciate the api object and permanently deleted
-when closing the C# program. It's NOT STORED in any PLACE unless you explicitly config this library to do so.
-If you don't trust, you can simply check the code here in this repo.
 
 ## Disclaimer
 This is not an official wrapper api, was made for educational and learning purposes.
