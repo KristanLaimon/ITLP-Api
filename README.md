@@ -6,7 +6,7 @@
 </div>
 
 A direct and easy kardex access from C# library designed to interface
-with the "Instituto Tecnológico de La Paz" school's Kardex system
+with the "Instituto Tecnológico de La Paz" (México) school's Kardex system
 "An academic records platform where students can view their grades"
 
 The wrapper simplifies communication with the underlying siia2 (Laravel-based) portal,
@@ -29,16 +29,9 @@ to integrate Kardex functionality into their C# applications (e.g., personal das
 if they want to, of course.
 
 ## Disclaimer
-This is not an official wrapper api, was made for educational and learning purposes.
-
-🏗️🚧 This is under development, so it can be unstable at the time writing this readme 🏗️🚧
-
-When finished, will be released as .ddl library here on github and as a NUGET package.
-
-If you find this useful let me know giving a star to this repo!
+This is not an official wrapper api, was made for educational and learning purposes, but completely functional,
+even though its in theory doing web scrapping, it requires your ITLP credentials anyway.
 
 ## LICENSE
 MIT. You can do as you please with this code, BUT YOU MUST INCLUDING MIT licence as well in your proyect
 WITHOUT change the actual MIT license.
-
-💖 I would really appreciate if you give credits: @KristanLaimon 2025 💖
