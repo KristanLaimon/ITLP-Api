@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="qQ74qJp40ypQsSvL3w4WpoGmjxA18TC6yWUuwvot">
+    <title></title>
+    <link rel="stylesheet" href="/libreria/iconos/fontawesome/css/all.css">
+    <link rel="modulepreload" as="script" href="https://siia2.lapaz.tecnm.mx/build/assets/app-CysxO36n.js" /><link rel="modulepreload" as="script" href="https://siia2.lapaz.tecnm.mx/build/assets/jquery-CMFPy4Wz.js" /><link rel="modulepreload" as="script" href="https://siia2.lapaz.tecnm.mx/build/assets/loading-BJNpjITe.js" /><script type="module" src="https://siia2.lapaz.tecnm.mx/build/assets/app-CysxO36n.js" data-navigate-track="reload"></script>    <link rel="preload" as="style" href="https://siia2.lapaz.tecnm.mx/build/assets/style-Bqqgky22.css" /><link rel="stylesheet" href="https://siia2.lapaz.tecnm.mx/build/assets/style-Bqqgky22.css" data-navigate-track="reload" />    
+    <script src='/js/angular.js'></script>
+    <script>
+        let app = angular.module('app', []);
+    </script>
+    <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.list-item][wire\:loading\.list-item], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+</head>
+<body id="body">
+    <div wire:loading.flex wire:target="*" id='idsContenedor' class="lds-contenedor"
+        style="display: none">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+                    
+            <link rel="modulepreload" as="script" href="https://siia2.lapaz.tecnm.mx/build/assets/nav_menu-B1Wq-boI.js" /><link rel="modulepreload" as="script" href="https://siia2.lapaz.tecnm.mx/build/assets/jquery-CMFPy4Wz.js" /><script type="module" src="https://siia2.lapaz.tecnm.mx/build/assets/nav_menu-B1Wq-boI.js" data-navigate-track="reload"></script><header class="menu_top header">
+    <i class="fa-solid fa-bars fa-xl" id="btn_open2"></i>
+</header>
+<nav class="menu_side header" id="menu_side">
+    <header>
+        <i class="fa-solid fa-bars fa-xl" id="btn_open"></i>
+    </header>
+        <ul>
+        <li >
+            <div class="nombre_usuario">
+                <i class="fa-solid fa-user"></i>
+                <span>JUAN</span>
+            </div>
+
+        </li>
+                <li>
+            <a href="#">
+                <i class="fa-solid fa-house" title="Alumno"></i>
+                <span>Alumno</span>
+            </a>
+            <ul>
+                                                <li>
+                        <a href="https://siia2.lapaz.tecnm.mx/alumnos">
+                            <i class="fa-solid fa-house"></i>
+                            Inicio
+                        </a>
+                                        </li>
+                                                                <li>
+                        <a href="https://siia2.lapaz.tecnm.mx/alumno/logout">
+                            <i class="fa-solid fa-bell"></i>
+                            Cerrar sesion
+                        </a>
+                                        </li>
+                                                                <li>
+                        <a href="https://siia2.lapaz.tecnm.mx/alumnos/historial-academico">
+                            <i class="fa-solid fa-book"></i>
+                            Historial académico
+                        </a>
+                                        </li>
+                                        </ul>
+        </li>
+            <li>
+            <a href="#">
+                <i class="fa-solid fa-pen-to-square" title="Residencias"></i>
+                <span>Residencias</span>
+            </a>
+            <ul>
+                                                <li>
+                        <a href="https://siia2.lapaz.tecnm.mx/residencias/solicitud">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            Solicitud
+                        </a>
+                                        </li>
+                                                                <li>
+                        <a href="https://siia2.lapaz.tecnm.mx/residencias/banco_proyecto">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            Banco de Proyectos
+                        </a>
+                                        </li>
+                                        </ul>
+        </li>
+            <li>
+            <a href="#">
+                <i class="fa-solid fa-pen-to-square" title="Reinscripción"></i>
+                <span>Reinscripción</span>
+            </a>
+            <ul>
+                                                <li>
+                        <a href="https://siia2.lapaz.tecnm.mx/reinscripcion">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            Reinscribirse
+                        </a>
+                                        </li>
+                                        </ul>
+        </li>
+        </ul>
+</nav>
+        
+    <main id="main">
+                                                <main wire:snapshot="{&quot;data&quot;:{&quot;a\u00f1o&quot;:2026,&quot;periodo&quot;:2,&quot;control&quot;:&quot;00000000&quot;,&quot;cordinador&quot;:false},&quot;memo&quot;:{&quot;id&quot;:&quot;lGwkv5VRWm0TAEedCrTY&quot;,&quot;name&quot;:&quot;alumnos.historial-academico&quot;,&quot;path&quot;:&quot;alumnos\/historial-academico&quot;,&quot;method&quot;:&quot;GET&quot;,&quot;release&quot;:&quot;a-a-a&quot;,&quot;children&quot;:[],&quot;scripts&quot;:[],&quot;assets&quot;:[],&quot;errors&quot;:[],&quot;locale&quot;:&quot;es&quot;,&quot;islands&quot;:[]},&quot;checksum&quot;:&quot;bad5eda5ef25b2b12e2532e05462dcf57576a26b5c2d3e14d4de2f945d19b53c&quot;}" wire:effects="[]" wire:id="lGwkv5VRWm0TAEedCrTY" wire:name="alumnos.historial-academico">
+<section style="margin-top: 20px; margin-bottom: 20px;">
+    <table class="tabla">
+        <tbody>
+                        <!--[if BLOCK]><![endif]-->                <!--[if BLOCK]><![endif]-->                                        <thead style="position:unset;">
+                        <tr>
+                            <th colspan="6">Semestre: 1 Periodo:AGO-DIC 2022</th>
+                        </tr>
+                        <tr>
+                            <th>Materia</th>
+                            <th>Creditos</th>
+                            <th>Grupo</th>
+                            <th>Maestro</th>
+                            <th>Calificacion</th>
+                            <th>Oportunidad</th>
+                        </tr>
+                    </thead>
+                <!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>FUNDAMENTOS DE PROGRAMACION</td>
+                    <td>5</td>
+                    <td>A</td>
+                    <td>MARIA EJEMPLO DEMO</td>
+                    <td>80</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>TALLER DE ETICA</td>
+                    <td>4</td>
+                    <td>A</td>
+                    <td>JOSE PRUEBA FICTICIO</td>
+                    <td>82</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>TALLER DE ADMINISTRACION</td>
+                    <td>4</td>
+                    <td>A</td>
+                    <td>LAURA MUESTRA FALSA</td>
+                    <td>85</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>FUNDAMENTOS DE INVESTIGACION</td>
+                    <td>4</td>
+                    <td>A</td>
+                    <td>PATRICIA SIMULADA TEST</td>
+                    <td>88</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>CALCULO DIFERENCIAL</td>
+                    <td>5</td>
+                    <td>A</td>
+                    <td>CARLOS INVENTADO PLACEHOLDER</td>
+                    <td>90</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>MATEMATICAS DISCRETAS</td>
+                    <td>5</td>
+                    <td>A</td>
+                    <td>DIEGO FALSO EJEMPLO</td>
+                    <td>91</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]-->                        <tr>
+                            <td>TUTORIA</td>
+                            <td>1</td>
+                            <td>A</td>
+                            <td>VICTOR DUMMY</td>
+                            <td>APROBADA</td>
+                        </tr>
+                                            <tr>
+                            <td>MUSICA</td>
+                            <td>1</td>
+                            <td>B</td>
+                            <td>NICOLAS DEMO</td>
+                            <td>APROBADA</td>
+                        </tr>
+                                            <tr>
+                            <td>ACTIVIDADES COMPLEMENTARIAS</td>
+                            <td>1</td>
+                            <td>?</td>
+                            <td></td>
+                            <td>APROBADA</td>
+                        </tr>
+                    <!--[if ENDBLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <tr>
+                        <td colspan="4" style="text-align: right; font-weight: bold;">
+                            Promedio del semestre:
+                        </td>
+                        <td style="font-weight: bold;">
+                            86
+                        </td>
+                    </tr>
+                <!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]-->                                        <thead style="position:unset;">
+                        <tr>
+                            <th colspan="6">Semestre: 2 Periodo:ENE-JUN 2023</th>
+                        </tr>
+                        <tr>
+                            <th>Materia</th>
+                            <th>Creditos</th>
+                            <th>Grupo</th>
+                            <th>Maestro</th>
+                            <th>Calificacion</th>
+                            <th>Oportunidad</th>
+                        </tr>
+                    </thead>
+                <!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>PROGRAMACION ORIENTADA A OBJETOS</td>
+                    <td>5</td>
+                    <td>A</td>
+                    <td>MARIA EJEMPLO DEMO</td>
+                    <td>80</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>PROBABILIDAD Y ESTADISTICA</td>
+                    <td>5</td>
+                    <td>A</td>
+                    <td>FERNANDO SAMPLE DATA</td>
+                    <td>82</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>ALGEBRA LINEAL</td>
+                    <td>5</td>
+                    <td>A</td>
+                    <td>ANDRES MOCK PRUEBA</td>
+                    <td>85</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>CONTABILIDAD FINANCIERA</td>
+                    <td>4</td>
+                    <td>A</td>
+                    <td>MONICA FICTICIA TEST</td>
+                    <td>88</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>CALCULO INTEGRAL</td>
+                    <td>5</td>
+                    <td>A</td>
+                    <td>CARLOS INVENTADO PLACEHOLDER</td>
+                    <td>90</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>QUIMICA </td>
+                    <td>4</td>
+                    <td>A</td>
+                    <td>ELENA DEMO FALSA</td>
+                    <td>91</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]-->                        <tr>
+                            <td>TUTORIA</td>
+                            <td>1</td>
+                            <td>L</td>
+                            <td>MARIA EJEMPLO</td>
+                            <td>APROBADA</td>
+                        </tr>
+                                            <tr>
+                            <td>MUSICA</td>
+                            <td>1</td>
+                            <td>B</td>
+                            <td>NICOLAS DEMO</td>
+                            <td>APROBADA</td>
+                        </tr>
+                    <!--[if ENDBLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <tr>
+                        <td colspan="4" style="text-align: right; font-weight: bold;">
+                            Promedio del semestre:
+                        </td>
+                        <td style="font-weight: bold;">
+                            86
+                        </td>
+                    </tr>
+                <!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]-->                                        <thead style="position:unset;">
+                        <tr>
+                            <th colspan="6">Semestre: 3 Periodo:AGO-DIC 2023</th>
+                        </tr>
+                        <tr>
+                            <th>Materia</th>
+                            <th>Creditos</th>
+                            <th>Grupo</th>
+                            <th>Maestro</th>
+                            <th>Calificacion</th>
+                            <th>Oportunidad</th>
+                        </tr>
+                    </thead>
+                <!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>DESAROLLO SUSTENTABLE</td>
+                    <td>5</td>
+                    <td>D</td>
+                    <td>ANDRES MOCK PRUEBA</td>
+                    <td>80</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>FISICA GENERAL</td>
+                    <td>5</td>
+                    <td>D</td>
+                    <td>SERGIO EJEMPLO MOCK</td>
+                    <td>82</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>INVESTIGACION DE OPERACIONES</td>
+                    <td>4</td>
+                    <td>D</td>
+                    <td>JAVIER PRUEBA DEMO</td>
+                    <td>85</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>CALCULO VECTORIAL</td>
+                    <td>5</td>
+                    <td>D</td>
+                    <td>ADRIANA MUESTRA DEMO</td>
+                    <td>88</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>ESTRUCTURA DE DATOS</td>
+                    <td>5</td>
+                    <td>D</td>
+                    <td>CESAR INVENTADO TEST</td>
+                    <td>90</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>CULTURA EMPRESARIAL</td>
+                    <td>4</td>
+                    <td>D</td>
+                    <td>JAIME FICTICIO MOCK</td>
+                    <td>91</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <tr>
+                        <td colspan="4" style="text-align: right; font-weight: bold;">
+                            Promedio del semestre:
+                        </td>
+                        <td style="font-weight: bold;">
+                            86
+                        </td>
+                    </tr>
+                <!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]-->                                        <thead style="position:unset;">
+                        <tr>
+                            <th colspan="6">Semestre: 4 Periodo:ENE-JUN 2024</th>
+                        </tr>
+                        <tr>
+                            <th>Materia</th>
+                            <th>Creditos</th>
+                            <th>Grupo</th>
+                            <th>Maestro</th>
+                            <th>Calificacion</th>
+                            <th>Oportunidad</th>
+                        </tr>
+                    </thead>
+                <!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>SIMULACION</td>
+                    <td>5</td>
+                    <td>C</td>
+                    <td>JAIME FICTICIO MOCK</td>
+                    <td>80</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>PRINCIPIOS ELECTRICOS Y APLICACIONES DIGITALES</td>
+                    <td>5</td>
+                    <td>C</td>
+                    <td>ANDRES MOCK PRUEBA</td>
+                    <td>82</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>FUNDAMENTOS DE BASE DE DATOS</td>
+                    <td>5</td>
+                    <td>C</td>
+                    <td>PATRICIA SIMULADA TEST</td>
+                    <td>85</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>TOPICOS AVANZADOS DE PROGRAMACION</td>
+                    <td>5</td>
+                    <td>C</td>
+                    <td>CESAR INVENTADO TEST</td>
+                    <td>88</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>METODOS NUMERICOS</td>
+                    <td>4</td>
+                    <td>C</td>
+                    <td>IVAN SAMPLE MOCK</td>
+                    <td>90</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>ECUACIONES DIFERENCIALES</td>
+                    <td>5</td>
+                    <td>C</td>
+                    <td>ADRIANA MUESTRA DEMO</td>
+                    <td>91</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <tr>
+                        <td colspan="4" style="text-align: right; font-weight: bold;">
+                            Promedio del semestre:
+                        </td>
+                        <td style="font-weight: bold;">
+                            86
+                        </td>
+                    </tr>
+                <!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]-->                                        <thead style="position:unset;">
+                        <tr>
+                            <th colspan="6">Semestre: 5 Periodo:AGO-DIC 2024</th>
+                        </tr>
+                        <tr>
+                            <th>Materia</th>
+                            <th>Creditos</th>
+                            <th>Grupo</th>
+                            <th>Maestro</th>
+                            <th>Calificacion</th>
+                            <th>Oportunidad</th>
+                        </tr>
+                    </thead>
+                <!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>GRAFICACION</td>
+                    <td>4</td>
+                    <td>E</td>
+                    <td>JULIO DEMO TEST</td>
+                    <td>80</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>ARQUITECTURA DE COMPUTADORAS</td>
+                    <td>5</td>
+                    <td>E</td>
+                    <td>ANDRES MOCK PRUEBA</td>
+                    <td>82</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>FUNDAMENTOS DE INGENIERIA DE SOFTWARE</td>
+                    <td>4</td>
+                    <td>E</td>
+                    <td>PATRICIA SIMULADA TEST</td>
+                    <td>85</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>SISTEMAS OPERATIVOS</td>
+                    <td>4</td>
+                    <td>E</td>
+                    <td>MANUEL FALSO SAMPLE</td>
+                    <td>88</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>FUNDAMENTOS DE TELECOMUNICACIONES</td>
+                    <td>4</td>
+                    <td>E</td>
+                    <td>ARTURO EJEMPLO FICTICIO</td>
+                    <td>90</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>TALLER DE BASE DE DATOS</td>
+                    <td>4</td>
+                    <td>E</td>
+                    <td>CESAR INVENTADO TEST</td>
+                    <td>91</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>LENGUAJES Y AUTOMATAS I</td>
+                    <td>5</td>
+                    <td>E</td>
+                    <td>DIEGO FALSO EJEMPLO</td>
+                    <td>93</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <tr>
+                        <td colspan="4" style="text-align: right; font-weight: bold;">
+                            Promedio del semestre:
+                        </td>
+                        <td style="font-weight: bold;">
+                            87
+                        </td>
+                    </tr>
+                <!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]-->                                        <thead style="position:unset;">
+                        <tr>
+                            <th colspan="6">Semestre: 6 Periodo:ENE-JUN 2025</th>
+                        </tr>
+                        <tr>
+                            <th>Materia</th>
+                            <th>Creditos</th>
+                            <th>Grupo</th>
+                            <th>Maestro</th>
+                            <th>Calificacion</th>
+                            <th>Oportunidad</th>
+                        </tr>
+                    </thead>
+                <!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>TALLER DE SISTEMAS OPERATIVOS</td>
+                    <td>4</td>
+                    <td>E</td>
+                    <td>ARTURO EJEMPLO FICTICIO</td>
+                    <td>80</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>LENGUAJES DE INTERFAZ</td>
+                    <td>4</td>
+                    <td>E</td>
+                    <td>JULIO DEMO TEST</td>
+                    <td>82</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>INGENIERIA DE SOFTWARE</td>
+                    <td>5</td>
+                    <td>E</td>
+                    <td>PATRICIA SIMULADA TEST</td>
+                    <td>85</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>ADMINISTRACION DE BASE DE DATOS</td>
+                    <td>5</td>
+                    <td>E</td>
+                    <td>LILIANA MUESTRA MOCK</td>
+                    <td>88</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>REDES DE COMPUTADORAS</td>
+                    <td>5</td>
+                    <td>E</td>
+                    <td>ARTURO EJEMPLO FICTICIO</td>
+                    <td>90</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>LENGUAJES Y AUTOMATAS II</td>
+                    <td>5</td>
+                    <td>E</td>
+                    <td>DIEGO FALSO EJEMPLO</td>
+                    <td>91</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <tr>
+                        <td colspan="4" style="text-align: right; font-weight: bold;">
+                            Promedio del semestre:
+                        </td>
+                        <td style="font-weight: bold;">
+                            86
+                        </td>
+                    </tr>
+                <!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]-->                                        <thead style="position:unset;">
+                        <tr>
+                            <th colspan="6">Semestre: 7 Periodo:AGO-DIC 2025</th>
+                        </tr>
+                        <tr>
+                            <th>Materia</th>
+                            <th>Creditos</th>
+                            <th>Grupo</th>
+                            <th>Maestro</th>
+                            <th>Calificacion</th>
+                            <th>Oportunidad</th>
+                        </tr>
+                    </thead>
+                <!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>INTRODUCCIÓN A LA SEGURIDAD EN LAS TIC</td>
+                    <td>4</td>
+                    <td>G</td>
+                    <td>ALFREDO DEMO PLACEHOLDER</td>
+                    <td>80</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>GESTIÓN DE RIESGOS</td>
+                    <td>4</td>
+                    <td>G</td>
+                    <td>ARTURO EJEMPLO FICTICIO</td>
+                    <td>82</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>PROGRAMACION WEB</td>
+                    <td>5</td>
+                    <td>G</td>
+                    <td>IVAN SAMPLE MOCK</td>
+                    <td>85</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>PROGRAMACION LOGICA Y FUNCIONAL</td>
+                    <td>4</td>
+                    <td>G</td>
+                    <td>KARINA PRUEBA FALSA</td>
+                    <td>88</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>SISTEMAS PROGRAMABLES</td>
+                    <td>4</td>
+                    <td>G</td>
+                    <td>ANDRES MOCK PRUEBA</td>
+                    <td>90</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>TALLER DE INVESTIGACION I</td>
+                    <td>4</td>
+                    <td>G</td>
+                    <td>ALAN MOCK DEMO</td>
+                    <td>91</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>CONMUTACION Y ENRUTAMIENTO EN REDES DE DATOS</td>
+                    <td>5</td>
+                    <td>G</td>
+                    <td>ARTURO EJEMPLO FICTICIO</td>
+                    <td>93</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]-->                        <tr>
+                            <td>ACTIVIDADES COMPLEMENTARIAS</td>
+                            <td>1</td>
+                            <td>?</td>
+                            <td></td>
+                            <td>APROBADA</td>
+                        </tr>
+                    <!--[if ENDBLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <tr>
+                        <td colspan="4" style="text-align: right; font-weight: bold;">
+                            Promedio del semestre:
+                        </td>
+                        <td style="font-weight: bold;">
+                            87
+                        </td>
+                    </tr>
+                <!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]-->                                        <thead style="position:unset;">
+                        <tr>
+                            <th colspan="6">Semestre: 8 Periodo:ENE-JUN 2026</th>
+                        </tr>
+                        <tr>
+                            <th>Materia</th>
+                            <th>Creditos</th>
+                            <th>Grupo</th>
+                            <th>Maestro</th>
+                            <th>Calificacion</th>
+                            <th>Oportunidad</th>
+                        </tr>
+                    </thead>
+                <!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>AUDITORÍA DE TECNOLOGÍAS Y SISTEMAS DE INFORMACIÓN</td>
+                    <td>4</td>
+                    <td>F</td>
+                    <td>GRACIELA FICTICIA SAMPLE</td>
+                    <td>80</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>SEGURIDAD PERIMETRAL</td>
+                    <td>4</td>
+                    <td>F</td>
+                    <td>ARTURO EJEMPLO FICTICIO</td>
+                    <td>82</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>INTELIGENCIA ARTIFICIAL</td>
+                    <td>4</td>
+                    <td>I</td>
+                    <td>KARINA PRUEBA FALSA</td>
+                    <td>85</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>TALLER DE INVESTIGACION II</td>
+                    <td>4</td>
+                    <td>I</td>
+                    <td>JAIME FICTICIO MOCK</td>
+                    <td>88</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>ADMINISTRACION DE REDES</td>
+                    <td>4</td>
+                    <td>I</td>
+                    <td>DANIEL DEMO INVENTADO</td>
+                    <td>90</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                                <tr>
+                    <td>SEGURIDAD EN REDES LAN</td>
+                    <td>5</td>
+                    <td>F</td>
+                    <td>ALFREDO DEMO PLACEHOLDER</td>
+                    <td>91</td>
+                    <td>NORMAL</td>
+                </tr>
+                <!--[if BLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]-->                        <tr>
+                            <td>SERVICIO SOCIAL</td>
+                            <td>10</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>ACREDITADO</td>
+                        </tr>
+                    <!--[if ENDBLOCK]><![endif]-->                    <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->                    <tr>
+                        <td colspan="4" style="text-align: right; font-weight: bold;">
+                            Promedio del semestre:
+                        </td>
+                        <td style="font-weight: bold;">
+                            86
+                        </td>
+                    </tr>
+                <!--[if ENDBLOCK]><![endif]-->            <!--[if ENDBLOCK]><![endif]-->            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->            <!--[if BLOCK]><![endif]--><!--[if ENDBLOCK]><![endif]-->        </tbody>
+    </table>
+</section>
+</main>
+                            </main>
+    <div id='errorModal' class="mi-modal-error"
+    >
+    <div class="mi-modal-content">
+        <div id='modalHeader' class="mi-modal-header-error">
+            <span class="mi-modal-close">&times;</span>
+            <h2 id='modalTitle'>Aviso</h2>
+        </div>
+        <div class="mi-modal-body">
+            <ul id="listaErroresModal" class="p-0 m-0" style="list-style: none;">
+            </ul>
+        </div>
+        <div id='modalFooter' class="mi-modal-footer-error">
+            <h3></h3>
+        </div>
+    </div>
+</div>
+
+    <div id='idsContenedor' class="lds-contenedor" style="display: none">
+    <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>    <script src="https://siia2.lapaz.tecnm.mx/livewire-636c3210/livewire.min.js?id=26bbdf42"   data-csrf="qQ74qJp40ypQsSvL3w4WpoGmjxA18TC6yWUuwvot" data-module-url="https://siia2.lapaz.tecnm.mx/livewire-636c3210" data-update-uri="https://siia2.lapaz.tecnm.mx/livewire-636c3210/update" data-navigate-once="true"></script>
+</body>
+</html>

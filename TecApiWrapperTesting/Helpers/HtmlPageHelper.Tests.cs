@@ -1,13 +1,12 @@
-﻿using AngleSharp.Dom;
-using TecWrapperApi.Helpers;
+﻿using TecWrapperApi.Helpers;
 namespace TecApiWrapperTesting.Helpers;
 
 
 public class HtmlPageHelperTests
 {
     private readonly string LoginPage = MockPages.LoginPage;
-    private readonly string MainPage = MockPages.MainPage;
-    
+    private readonly string StudentStatusPage = MockPages.StudentStatusPage;
+
     [Fact]
     public void IsLoginPage_MustReturnTrueWithLoginPage()
     {
@@ -18,14 +17,7 @@ public class HtmlPageHelperTests
     [Fact]
     public void IsLoginPage_MustReturnFalseIfNotLoginPage()
     {
-        bool found = HtmlPageHelper.IsLoginPage(this.MainPage);
+        bool found = HtmlPageHelper.IsLoginPage(this.StudentStatusPage);
         Assert.False(found);
-    }
-
-    [Theory]
-    [InlineData("asdf", "asdf", " asdf" )]
-    public void FindFirst_MustFindCorrectlyHtmlElement(string htmlContent, string cssSelector, string expectedElementType)
-    {
-        
     }
 }

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="qQ74qJp40ypQsSvL3w4WpoGmjxA18TC6yWUuwvot">
+    <title>siia</title>
+    <link rel="stylesheet" href="/libreria/iconos/fontawesome/css/all.css">
+    <link rel="modulepreload" as="script" href="https://siia2.lapaz.tecnm.mx/build/assets/app-CysxO36n.js" /><link rel="modulepreload" as="script" href="https://siia2.lapaz.tecnm.mx/build/assets/jquery-CMFPy4Wz.js" /><link rel="modulepreload" as="script" href="https://siia2.lapaz.tecnm.mx/build/assets/loading-BJNpjITe.js" /><script type="module" src="https://siia2.lapaz.tecnm.mx/build/assets/app-CysxO36n.js" data-navigate-track="reload"></script>    <link rel="preload" as="style" href="https://siia2.lapaz.tecnm.mx/build/assets/style-Bqqgky22.css" /><link rel="stylesheet" href="https://siia2.lapaz.tecnm.mx/build/assets/style-Bqqgky22.css" data-navigate-track="reload" />        <script src='/js/angular.js'></script>
+    <script>
+        let app = angular.module('app', []);
+    </script>
+    <!-- Livewire Styles --><style >[wire\:loading][wire\:loading], [wire\:loading\.delay][wire\:loading\.delay], [wire\:loading\.list-item][wire\:loading\.list-item], [wire\:loading\.inline-block][wire\:loading\.inline-block], [wire\:loading\.inline][wire\:loading\.inline], [wire\:loading\.block][wire\:loading\.block], [wire\:loading\.flex][wire\:loading\.flex], [wire\:loading\.table][wire\:loading\.table], [wire\:loading\.grid][wire\:loading\.grid], [wire\:loading\.inline-flex][wire\:loading\.inline-flex] {display: none;}[wire\:loading\.delay\.none][wire\:loading\.delay\.none], [wire\:loading\.delay\.shortest][wire\:loading\.delay\.shortest], [wire\:loading\.delay\.shorter][wire\:loading\.delay\.shorter], [wire\:loading\.delay\.short][wire\:loading\.delay\.short], [wire\:loading\.delay\.default][wire\:loading\.delay\.default], [wire\:loading\.delay\.long][wire\:loading\.delay\.long], [wire\:loading\.delay\.longer][wire\:loading\.delay\.longer], [wire\:loading\.delay\.longest][wire\:loading\.delay\.longest] {display: none;}[wire\:offline][wire\:offline] {display: none;}[wire\:dirty]:not(textarea):not(input):not(select) {display: none;}:root {--livewire-progress-bar-color: #2299dd;}[x-cloak] {display: none !important;}[wire\:cloak] {display: none !important;}dialog#livewire-error::backdrop {background-color: rgba(0, 0, 0, .6);}</style>
+</head>
+<body id="body">
+    <div wire:loading.flex wire:target="*" id='idsContenedor' class="lds-contenedor"
+        style="display: none">
+        <div class="lds-ring">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+                    
+            <link rel="modulepreload" as="script" href="https://siia2.lapaz.tecnm.mx/build/assets/nav_menu-B1Wq-boI.js" /><link rel="modulepreload" as="script" href="https://siia2.lapaz.tecnm.mx/build/assets/jquery-CMFPy4Wz.js" /><script type="module" src="https://siia2.lapaz.tecnm.mx/build/assets/nav_menu-B1Wq-boI.js" data-navigate-track="reload"></script><header class="menu_top header">
+    <i class="fa-solid fa-bars fa-xl" id="btn_open2"></i>
+</header>
+<nav class="menu_side header" id="menu_side">
+    <header>
+        <i class="fa-solid fa-bars fa-xl" id="btn_open"></i>
+    </header>
+        <ul>
+        <li >
+            <div class="nombre_usuario">
+                <i class="fa-solid fa-user"></i>
+                <span>JUAN</span>
+            </div>
+
+        </li>
+                <li>
+            <a href="#">
+                <i class="fa-solid fa-house" title="Alumno"></i>
+                <span>Alumno</span>
+            </a>
+            <ul>
+                                                <li>
+                        <a href="https://siia2.lapaz.tecnm.mx/alumnos">
+                            <i class="fa-solid fa-house"></i>
+                            Inicio
+                        </a>
+                                        </li>
+                                                                <li>
+                        <a href="https://siia2.lapaz.tecnm.mx/alumno/logout">
+                            <i class="fa-solid fa-bell"></i>
+                            Cerrar sesion
+                        </a>
+                                        </li>
+                                                                <li>
+                        <a href="https://siia2.lapaz.tecnm.mx/alumnos/historial-academico">
+                            <i class="fa-solid fa-book"></i>
+                            Historial académico
+                        </a>
+                                        </li>
+                                        </ul>
+        </li>
+            <li>
+            <a href="#">
+                <i class="fa-solid fa-pen-to-square" title="Residencias"></i>
+                <span>Residencias</span>
+            </a>
+            <ul>
+                                                <li>
+                        <a href="https://siia2.lapaz.tecnm.mx/residencias/solicitud">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            Solicitud
+                        </a>
+                                        </li>
+                                                                <li>
+                        <a href="https://siia2.lapaz.tecnm.mx/residencias/banco_proyecto">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            Banco de Proyectos
+                        </a>
+                                        </li>
+                                        </ul>
+        </li>
+            <li>
+            <a href="#">
+                <i class="fa-solid fa-pen-to-square" title="Reinscripción"></i>
+                <span>Reinscripción</span>
+            </a>
+            <ul>
+                                                <li>
+                        <a href="https://siia2.lapaz.tecnm.mx/reinscripcion">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                            Reinscribirse
+                        </a>
+                                        </li>
+                                        </ul>
+        </li>
+        </ul>
+</nav>
+        
+    <main id="main">
+        <div class="unaColumna">
+    <div class="siia--inicio">
+        <p><strong>Control: </strong>00000000</p>
+        <p><strong>Nombre: </strong>JUAN PEREZ GOMEZ</p>
+        <p><strong>Carrera: </strong>INGENIERÍA EN SISTEMAS COMPUTACIONALES</p>
+        <p><strong>Semestre: </strong>9</p>
+        <p><strong>Estatus: </strong>VIGENTE</p>
+        <p><strong>Inscrito: </strong>No</p>
+        <p><strong>Ingreso: </strong>AGOSTO 2022</p>
+        <p><strong>Creditos acumulados: </strong>240 (92.3%)</p>
+        <p><strong>Promedio: </strong>94.56</p>
+        <p><strong>Promedio semestre anterior: </strong>96</p>
+                                     <p><strong>Fecha reinscripción: </strong>21 de ago. del 2026, 08:09 hr</p>
+                                    <p><strong>Pago reinscripcion: <strong>SI</p>
+                                                    </div>
+</div>
+    </main>
+    <div id='errorModal' class="mi-modal-error"
+    >
+    <div class="mi-modal-content">
+        <div id='modalHeader' class="mi-modal-header-error">
+            <span class="mi-modal-close">&times;</span>
+            <h2 id='modalTitle'>Aviso</h2>
+        </div>
+        <div class="mi-modal-body">
+            <ul id="listaErroresModal" class="p-0 m-0" style="list-style: none;">
+            </ul>
+        </div>
+        <div id='modalFooter' class="mi-modal-footer-error">
+            <h3></h3>
+        </div>
+    </div>
+</div>
+
+    <div id='idsContenedor' class="lds-contenedor" style="display: none">
+    <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>    <script src="https://siia2.lapaz.tecnm.mx/livewire-636c3210/livewire.min.js?id=26bbdf42"   data-csrf="qQ74qJp40ypQsSvL3w4WpoGmjxA18TC6yWUuwvot" data-module-url="https://siia2.lapaz.tecnm.mx/livewire-636c3210" data-update-uri="https://siia2.lapaz.tecnm.mx/livewire-636c3210/update" data-navigate-once="true"></script>
+</body>
+</html>
