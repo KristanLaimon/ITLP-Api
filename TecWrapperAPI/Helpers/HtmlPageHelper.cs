@@ -16,8 +16,8 @@ internal static class HtmlPageHelper
         
         parser = new HtmlParser();
         var document = ParseTextDocument(htmlPage);
-        IHtmlInputElement? inputButton = document.QuerySelector<IHtmlInputElement>("input[id=\"editControl\"]");
-        return inputButton != null;
+        IHtmlInputElement? numeroInput = document.QuerySelector<IHtmlInputElement>("input[name=\"numero\"]");
+        return numeroInput != null;
     }
     
     /// <summary>

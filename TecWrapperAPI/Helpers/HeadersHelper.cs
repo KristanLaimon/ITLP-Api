@@ -11,7 +11,7 @@ internal static class HeadersHelper
         { "Connection", "keep-alive" },
         { "Pragma", "no-cache" },
         { "Priority", "u=0, i" },
-        { "Referer", "https://siia.lapaz.tecnm.mx/Login.aspx" },
+        { "Referer", "https://siia2.lapaz.tecnm.mx/login" },
         { "Sec-Fetch-Dest", "document" },
         { "Sec-Fetch-Mode", "navigate" },
         { "Sec-Fetch-Site", "same-origin" },
@@ -35,13 +35,13 @@ internal static class HeadersHelper
         }
     }
     
-    public static Dictionary<string, string> GetAuthHeaders(string studentNoControl, string password)
+    public static Dictionary<string, string> GetAuthFormValues(string csrfToken, string studentNoControl, string password)
     {
         var toReturn = new Dictionary<string, string>()
         {
-            { "editControl", studentNoControl },
-            { "editContraseña", password },
-            { "btnEntrar", "Entrar" }
+            { "_token", csrfToken },
+            { "numero", studentNoControl },
+            { "password", password }
         };
         return toReturn;
     }
